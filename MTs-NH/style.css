@@ -1,0 +1,510 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans',sans-serif;
+    background-color: hsl(0, 0%, 95%);
+}
+
+
+/* BAGIAN NAVIGASI */
+.wrapper{
+    width: 1600px;
+    margin: auto;
+    position: relative;
+}
+
+.logo a{
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    color: #06D001;
+}
+
+.menu{
+    float: right;
+}
+
+nav{
+    width: 100%;
+    margin: auto;
+    padding: 25px 0px 25px 0px;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    top: 0;
+    /* agar menempel di bagian atas   */
+    background: #478CCF;
+    z-index: 1;
+    border-bottom: 2px solid #364f6b;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+nav ul li{
+    float: left;
+}
+
+nav ul li a{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+a.tbl-biru{
+    background: #3572EF;
+    padding: 15px 20px 15px 20px;
+    color: #fff;
+    border-radius: 20px;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a.tbl-biru:hover{
+    background: #fc5185;
+    text-decoration: none;
+}
+
+
+
+
+/* BAGIAN HOME */
+.kbg{
+    background-image: url(images/kbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    background-attachment: fixed;
+}
+
+.kbg .wrapper .kolom{
+    margin-top: 160px;
+}
+
+section{
+    margin: auto;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+section img{
+    margin-right: 120px;
+    margin-top: 120px;
+}
+
+.kolom{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.kolom .deskripsi{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans ms';
+    color: #478CCF;
+}
+
+.kolom h2{
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 50px;
+    color: #364f6b;
+}
+
+.tbl-pink{
+    background: #fc5185;
+    padding: 15px 20px 15px 20px;
+    color: #fff;
+    border-radius: 20px;
+    margin: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: -4px;
+}
+
+.tbl-pink:hover{
+    background: #3572EF;
+    text-decoration: none;
+}
+
+p.deskripsi{
+    margin: 10px 0px 50px 0px;
+    padding: 10px 0px 10px 0px;
+}
+
+
+
+
+/* BAGIAN PROFIL */
+.haha img{
+    margin: 150px 80px 100px 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.kolom p{
+    margin-top: 50px;
+    margin-left: 80px;
+    font-size: 21px;
+}
+
+#profil h2{
+    margin-left: 80px;
+    padding-top: 100px;
+}
+
+#profil{
+    margin-top: 200px;
+    margin-bottom: 200px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* BAGIAN VISI MISI */
+
+.vimi{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.vimi-section{
+    width: 30%;
+    margin: 0 auto;
+}
+/* gambar kepsek */
+.fk img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.vimi-section-img{
+    width: 20%;
+    margin: 0 auto;
+}
+
+.card-artikel{
+    margin-top: -110px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img{
+    width: 328px;
+    border-radius: 1.5rem;
+}
+
+.card-data{
+    width: 280px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    padding: 1.5rem 0.5rem 1.5rem 1.2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -12rem;
+    left: 0;
+    right: 0;
+    margin: 0px 0px 0px 7px;
+    opacity: 0;
+    transition: opacity 1s 1s;
+}
+
+.card-deskripsi{
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #364f6b;
+}
+
+.card-title{
+    font-size: 2rem;
+    font-weight: 500;
+}
+/* animasi gambar kepsek */
+.card-artikel:hover .card-data{
+    animation: show-data 1s forwards;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.card-artikel:hover{
+    animation: remove-overflow 2s forwards;
+    cursor: pointer;
+}
+
+@keyframes show-data{
+    50%{
+        transform: translateY(-13rem);
+    }
+    100%{
+        transform: translateY(-7rem)
+    }
+}
+
+@keyframes remove-overflow{
+    to{
+        overflow: initial;
+    }
+}
+
+
+.vimi-section h3{
+    margin-bottom: 50px;
+    font-size: 35px;
+}
+
+.vimi-section p{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.vimi-section li{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#vm h2{
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 100px;
+    width: 100%;
+    line-height: 20px;
+    color: #364f6b;
+    text-align: center;
+}
+
+#vm{
+    margin-top: 100px;
+    padding: 165px 0px 175px 0px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h4{
+    font-family: 'comic sans ms';
+    font-weight: bold;
+    color: #364f6b;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+
+
+/* BAGIAN FASILITAS */
+.tengah{
+    text-align: center;
+    width: 100%;
+}
+
+#fasilitas{
+    margin-top: 200px;
+    padding-top: 125px;
+    padding-bottom: 50px;
+    margin-bottom: 250px;
+    background: hsl(0, 0%, 100%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.f-list{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gbf{
+    width: 33%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+
+.gbf img{
+    margin: auto;
+    width: 400px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.gbf img:hover{
+    transform: scale(1.09);
+    cursor: pointer;
+}
+
+.gbf p{
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 25px;
+    text-align: center;
+    color: #364f6b;
+}
+
+
+
+
+/* BAGIAN KONTAK */
+.kolomk{
+    width: 100%;
+    text-align: center;
+    background: #478CCF;
+    text-transform: uppercase;
+    line-height: 70px;
+}
+
+.kolomk h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 90px;
+}
+
+.kolomk p{
+    padding: 15px 0;
+    font-style: italic;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #fff;
+}
+
+.kolomk input{
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.kolomk textarea{
+    height: 80px;
+    padding: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.kolomk input, .kolomk textarea{
+    width: 50%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    border-bottom: 4px solid #999;    
+}
+
+.kolomk input[type="submit"]{
+    border-bottom: none;
+    cursor: pointer;
+    background: #fc5185;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    border-radius: 10px;
+}
+
+.kontak{
+    padding-top: 150px;
+    margin-bottom: 100px;
+}
+
+
+
+
+/* BAGIAN SITEMAP */
+#sitemap{
+    background: #dedede;
+    padding: 120px 0px 120px 0px;
+}
+
+.Lsekolah img{
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.footer{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.footer-section{
+    width: 20%;
+    margin: 0 auto;
+}
+
+h3{
+    font-family: 'comic sans ms';
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #364f6b;
+    width: 100%;
+    line-height: 50px;
+}
+
+.footer-section p{
+    margin-bottom: 20px;
+}
+
+.kimg img{
+    float: left;
+    margin-right: 7px;
+}
+
+.kimg img:hover{
+    cursor: pointer;
+}
+
+.kimg2 img{
+    float: left;
+    margin-right: 7px;
+}
+
+
+
+
+/* Copyright */
+#copyright{
+    text-align: center;
+    width: 100%;
+    padding: 100px 0px 100px 0px;
+    background: #478CCF;
+    border-top: 2px solid #364f6b;
+}
